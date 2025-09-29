@@ -34,7 +34,6 @@ type TaskItem = {
 };
 
 const CustomFormControl = styled(FormControl)({
-  // your custom styles go here
   flexDirection: 'row',
   justifyContent: 'space-between',
 }) as typeof FormControl;
@@ -65,7 +64,13 @@ const TaskCard = (props: TaskCardProps) => {
   };
 
   const content = (
-    <>
+    <Box
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'flex-start',
+      }}
+    >
       <CardHeader
         sx={{ alignContent: 'center' }}
         title={<TextField label='Title' />}
@@ -99,7 +104,7 @@ const TaskCard = (props: TaskCardProps) => {
           </Button>
         </FormGroup>
       </CardActions>
-    </>
+    </Box>
   );
 
   return (

@@ -166,8 +166,3 @@ a.secondary {
     filter: invert();
   }
 }
-
-.button {
-  margin: 1rem;
-  color: red;
-}
