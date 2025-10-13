@@ -1,4 +1,8 @@
+import { Divider } from '@mui/material';
 import Box from '@mui/material/Box';
+import ImageList from '@mui/material/ImageList';
+import ImageListItem from '@mui/material/ImageListItem';
+import Typography from '@mui/material/Typography';
 import Image from 'next/image';
 // import ImageList from '@mui/material/ImageList';
 // import ImageListItem from '@mui/material/ImageListItem';
@@ -18,88 +22,58 @@ export default function Home() {
         p: 3,
       }}
     >
-      <Box component='h1'>Welcome to the homepage of Kevin Sung!</Box>
-      {/* <ImageList sx={{ width: 500, height: 450 }} cols={3} rowHeight={164}>
-        {itemData.map((item) => (
-          <ImageListItem key={item.img}>
-            <img
-              srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
-              src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
-              alt={item.title}
-              loading='lazy'
-            />
-          </ImageListItem>
-        ))}
-      </ImageList> */}
-      <Image
-        alt='Kevin Sung 1'
-        src={'/KevinSung1.jpg'}
-        width={332.5}
-        height={250}
-      />
-      <Image
-        alt='Kevin Sung 2'
-        src={'/KevinSung2.jpg'}
-        width={250}
-        height={332.5}
-      />
-      <Image
-        alt='Kevin Sung 3'
-        src={'/KevinSung3.jpg'}
-        width={332.5}
-        height={250}
-      />
+      <Box>
+        <Typography variant='h2' align='center'>
+          Welcome to the homepage of Kevin Sung!
+        </Typography>
+        <Typography
+          variant='h5'
+          gutterBottom
+          align='center'
+          fontStyle={'italic'}
+        >
+          "If I don't know how to do it, I'll figure it out!"
+        </Typography>
+      </Box>
+      <ImageList cols={3} gap={1} rowHeight={300}>
+        <ImageListItem>
+          <Image
+            alt='Kevin Sung 1'
+            src={'/KevinSung1.jpg'}
+            // width={332.5}
+            // height={250}
+            fill
+            objectFit='contain'
+          />
+        </ImageListItem>
+        <ImageListItem>
+          <Image
+            alt='Kevin Sung 2'
+            src={'/KevinSung2.jpg'}
+            fill
+            objectFit='contain'
+          />
+        </ImageListItem>
+        <ImageListItem>
+          <Image
+            alt='Kevin Sung 3'
+            src={'/KevinSung3.jpg'}
+            fill
+            objectFit='contain'
+          />
+        </ImageListItem>
+      </ImageList>
+      <Box>
+        <Typography variant='h3' gutterBottom>
+          There are two main purposes to this site:
+        </Typography>
+        <Typography variant='h5' gutterBottom>
+          1. To get hired as a Software Engineer
+        </Typography>
+        <Typography variant='h5' gutterBottom>
+          2. To play around and create tools that benefit my life!
+        </Typography>
+      </Box>
     </Box>
   );
 }
-
-// const itemData = [
-//   {
-//     img: 'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e',
-//     title: 'Breakfast',
-//   },
-//   {
-//     img: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d',
-//     title: 'Burger',
-//   },
-//   {
-//     img: 'https://images.unsplash.com/photo-1522770179533-24471fcdba45',
-//     title: 'Camera',
-//   },
-//   {
-//     img: 'https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c',
-//     title: 'Coffee',
-//   },
-//   {
-//     img: 'https://images.unsplash.com/photo-1533827432537-70133748f5c8',
-//     title: 'Hats',
-//   },
-//   {
-//     img: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62',
-//     title: 'Honey',
-//   },
-//   {
-//     img: 'https://images.unsplash.com/photo-1516802273409-68526ee1bdd6',
-//     title: 'Basketball',
-//   },
-//   {
-//     img: 'https://images.unsplash.com/photo-1518756131217-31eb79b20e8f',
-//     title: 'Fern',
-//   },
-//   {
-//     img: 'https://images.unsplash.com/photo-1597645587822-e99fa5d45d25',
-//     title: 'Mushrooms',
-//   },
-//   {
-//     img: 'https://images.unsplash.com/photo-1567306301408-9b74779a11af',
-//     title: 'Tomato basil',
-//   },
-//   {
-//     img: 'https://images.unsplash.com/photo-1471357674240-e1a485acb3e1',
-//     title: 'Sea star',
-//   },
-//   {
-//     img: 'https://images.unsplash.com/photo-1589118949245-7d38baf380d6',
-//     title: 'Bike',
-//   },
-// ];
